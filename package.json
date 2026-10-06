@@ -1,0 +1,11 @@
+{
+  "name": "dsh-team-workspace",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "pnpm --filter dsh-team-plugin run build",
+    "typecheck": "pnpm --filter dsh-team-plugin run typecheck",
+    "test": "pnpm --filter dsh-team-plugin run test"
+  }
+}

@@ -1,0 +1,32 @@
+智能体团队插件（dsh-team-plugin）
+Copyright 2026 gpmlimeng-cyber
+
+本产品包含对以下开源项目的改编，其作者与著作权归属如下：
+
+--------------------------------------------------------------------------------
+AionUi (https://github.com/iOfficeAI/AionUi)
+Copyright 2025 AionUi (aionui.com)
+Licensed under the Apache License, Version 2.0
+
+改编内容：
+  - 成员身份色算法与调色板（src/identity.ts）
+      源文件：packages/desktop/src/renderer/pages/team/identity/teamMemberColors.ts
+  - 活动看板泳道归属规则（src/activity.ts）
+      源文件：packages/desktop/src/renderer/pages/team/activity/activityTypes.ts
+  - 团队视图模式（src/view-mode.ts）
+      源文件：packages/desktop/src/renderer/pages/team/hooks/useTeamViewMode.ts
+  - 看板控制条持久化口径（src/activity-controls.ts）
+      源文件：packages/desktop/src/renderer/pages/team/hooks/useTeamActivityControls.ts
+
+--------------------------------------------------------------------------------
+AionCore (https://github.com/iOfficeAI/AionCore)
+Copyright 2025-2026 AionCore contributors
+Licensed under the Apache License, Version 2.0
+
+参考内容（未直接复制代码，仅借鉴设计）：
+  - 暖启动以「组长就绪」为撤遮罩闸门，避免单成员失败卡死整个团队
+  - 任务依赖驱动唤醒（blocked_by 为空才唤醒 owner）
+
+--------------------------------------------------------------------------------
+
+本插件为独立实现，与上述项目无隶属或背书关系。

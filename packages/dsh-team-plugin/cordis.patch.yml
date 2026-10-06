@@ -1,0 +1,10 @@
+# [INPUT]: 依赖官方 dsh.bundle patch 机制与裸包名 Loader；不依赖任何企业能力
+# [OUTPUT]: 在官方 profile 里插入 `dsh-team-plugin` 一行，使其能挂载本插件的 Host 半与 Client 半
+# [POS]: 本插件唯一的入口行；与 dshent 的 patch 完全独立，二者可共存也可各自单独安装
+# [PROTOCOL]: 变更时更新此头部，然后检查 README.md
+#
+# 本插件不做企业 profile 策略改造（不覆盖默认模型、不停用官方账户、不动官方设置入口），
+# 因此这里只有一条 insert 行，没有任何 `- id: ... disabled: true`。
+- insert:
+    - id: dsh-team
+      name: 'dsh-team-plugin'

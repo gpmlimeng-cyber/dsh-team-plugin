@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+
+# 与 dshent workspace 同策：本机预装工具链与仓库声明版本不一致时，禁掉 pnpm 自升级，
+# 避免每次 pnpm 命令都触发一次装包而失败。
+managePackageManagerVersions: false
+
+# esbuild 的原生二进制需要经审查的构建脚本；其余依赖一律不给生命周期脚本。
+allowBuilds:
+  esbuild: true

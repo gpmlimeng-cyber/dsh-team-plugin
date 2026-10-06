@@ -1,0 +1,8 @@
+node_modules/
+lib/
+client/
+*.tgz
+*.log
+.DS_Store
+.vite/
+coverage/

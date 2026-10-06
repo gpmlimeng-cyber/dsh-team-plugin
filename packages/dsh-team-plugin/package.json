@@ -1,0 +1,74 @@
+{
+  "name": "dsh-team-plugin",
+  "version": "0.1.0",
+  "description": "智能体团队插件：多智能体组队协作（对标 AionUi 团队体验）",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "agent",
+    "team",
+    "collaboration",
+    "ai"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "src",
+    "cordis.patch.yml",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ],
+      "external": [
+        "react"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "pack": "pnpm pack"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "@types/node": "22.20.0",
+    "esbuild": "0.28.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpmlimeng-cyber/dsh-team-plugin.git"
+  },
+  "homepage": "https://github.com/gpmlimeng-cyber/dsh-team-plugin#readme",
+  "bugs": "https://github.com/gpmlimeng-cyber/dsh-team-plugin/issues",
+  "license": "Apache-2.0"
+}
